@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">Sheet Metal Mechanic</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="spinner_array">
+        <item>Material THK</item>
+        <item>Radius</item>
+        <item>Angle</item>
+    </string-array>
+
+    <string-array name="spinner_aluminum_alloy">
+        <item>1100</item>
+        <item>2014</item>
+        <item>2024</item>
+        <item>3003</item>
+        <item>5052</item>
+        <item>6061</item>
+        <item>7075</item>
+    </string-array>
+
+    <string name="title_activity_minimum_bend_radius">Minimum Bend Radius</string>
+    <string name="pref_accept_eula">pref_accept_eula</string>
+    <string name="pref_file_name">SheetMetalReferencePreference</string>
+    <string name="pref_warning">prf_warning</string>
+
+    <string name="label_bend_deduction">Bend Deduction</string>
+    <string name="label_angle_bend">Angle Bend</string>
+    <string name="label_minimum_bend_radii_aluminum">Minimum Cold Bend Radii</string>
+    <string name="label_about">About</string>
+    <string name="definitions">Definitions</string>
+
+    <string name="material_thk">Material THK</string>
+    <string name="metal_thickness">Metal Thickness(MT)</string>
+    <string name="radius">Radius</string>
+    <string name="inside_radius">Inside Radius(R)</string>
+    <string name="angle">Angle\u00B0</string>
+    <string name="deduction">Deduction</string>
+    <string name="bend_deduction">Bend Deduction(BD)</string>
+    <string name="half_deduction">Half BD</string>
+    <string name="angle_180_degrees">Angle(A) 1\u00B0 &#8211; 180\u00B0</string>
+    <string name="reference_only">Reference Only</string>
+    <string name="leg_a">Leg A</string>
+    <string name="leg_b">Leg B</string>
+    <string name="calculate">Calculate</string>
+    <string name="example_image">Example Image</string>
+    <string name="material_alloy">Material Alloy</string>
+    <string name="order_by">Order by</string>
+    <string name="delete_list_item">Long press on list item to delete.</string>
+    <string name="greater_than_zero">All values must be greater than 0.</string>
+    <string name="degrees_greater_zero_less_one_eighty">Degrees are greater than 0 and less than 180.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="hint_.040">.040</string>
+    <string name="hint_.125">.125</string>
+    <string name="hint_90">90</string>
+    <string name="hint_1.5">1.5</string>
+    <string name="hint_.75">.75</string>
+    <string name="hint_01_10_2016">01/10/2016</string>
+    <string name="layout_flat_pattern">Layout Flat Pattern</string>
+    <string name="content_description_image_diagram">Two dimensional diagram</string>
+    <string name="flat_a">Flat A:</string>
+    <string name="flat_b">Flat B:</string>
+    <string name="total_blank_size">Total blank size:</string>
+    <string name="mil_hdbk_694a">Reference MIL-HDBK-694A</string>
+    <string name="activity_minimum_bend_radii">Approximate radii for 90 degree cold bend aluminum alloy.  Each entry is a range where t is the thickness of material.  For example, 1100-H12 aluminum alloy ½ inch thick can be bent 1t-3t or around a ½ to 1 ½ inch radius die. </string>
+    <string name="delete_row">Delete list item?</string>
+    <string name="developer_email">feedback@orangekode.com</string>
+    <string name="version">Version</string>
+    <string name="settings">Settings</string>
+    <string name="settings_clear_data">Clear All Entries</string>
+    <string name="settings_warning_delete">Delete all entries?</string>
+    <string name="settings_clear_data_explanation">This will delete all the current bend deduction entries.</string>
+    <string name="send_mail">Send Mail..</string>
+    <string name="email_subject">Feedback Sheet Metal Mechanic</string>
+    <string name="no_email_client_installed">There are no email clients installed</string>
+    <string name="warning_pinch_point">Warning Pinch Point</string>
+    <string name="contact">Contact Information</string>
+    <string name="main_get_to_work">Nothing to show, lets get started by hitting the top left menu button, calculating some bends and building some parts!</string>
+    <string name="end_user_license_agreement">End User License Agreement</string>
+    <string name="definition_bend_deduction">Bend deduction: The bend deduction is the difference between the bend allowance and twice the outside setback.</string>
+    <string name="activity_angle_bend_header">Sheet Metal Mechanic can calculate the dimensions of a flat pattern for a single bend application.  Input the appropriate variables, angle (A), radius (R), material thickness (MT), leg A and leg B to calculate the total blank size and the center of the bend.  For use with punch and die press brake machines.</string>
+    <string name="activity_bend_deduction_header">When calculating a flange with one bend, for example a right angle, subtract one half a bend deduction from each leg to calculate the total flat dimension. For calculating a flat with a bend on either side, for example a channel, subtract half a deduction for each bend or one deduction.</string>
+    <string name="activity_bend_deduction_footer">Sheet Metal Mechanic calculates bend allowance using the following Empirical formula.\n\n\t\tBend Allowance(BA) = (.01742R + .0078)A\u00B0\n\nThen using bend allowance value calculates bend deduction using the following.\n\n\t\tBend Deduction(BD) = 2(r+t) x Tan(A\u00B0/2) - BA</string>
+    <string name="activity_about_header">Thank you for giving Sheet Metal Mechanic a try!  If you have any questions, comments, or suggestions, please send me an email, I would appreciate the feedback.</string>
+    <string name="warning_description">1. Please read and understand any applicable operating manuals, taking note of all warnings and cautions.  The calculations contained within this application are in a “as is” state and are to be considered “Reference only”.  Please verify all calculations with appropriate approved data and or standard shop practices.\n 2. Mechanical Movement Danger: Mechanical movement of the ram and back gauge assembly. Be aware of their movement and stay away from the points of operation. \n 3. Press brake should only be operated by authorized personnel who have been trained by an authorized individual. \n 4. Never eliminate or by-pass any safety devices. \n 5. Never make adjustments, repairs, replacements or leave machine unattended with the power "ON". \n6. Do not use machine if servicing is required. \n 7. Use safety glasses, safety shoes, required protective tools and appropriate personnel protective equipment. \n 8. Keep work areas clean and in proper order. \n 9. Always stay alert to all potential hazards. Never become careless or over confident. \n 10. Do not grasp metal sheet with fingers or thumbs on top. If wide sheets need support, keep hands below with open palms, and fingers and thumbs underneath. Remember that the material will travel upward &#8212; keep all parts of the body clear of this movement. \n 11. When inspecting or changing hydraulic components, make certain the ram is securely blocked or resting on a die, with pressure relieved from system.
+    </string>
+    <string name="eula">
+        This End User License Agreement (EULA) constitutes a valid and binding agreement between OrangeKode and you, as a user, for the use of Sheet Metal Mechanic (Software) defined as set forth below.  YOU are accepting this license agreement by installing and continued use of this software YOU EXPRESSLY ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTAND AND AGREE TO BE BOUND BY THE TERMS OF THIS EULA AND ANY NEW VERSIONS HEREOF.\n\n
+        1.	Software: Means the OrangeKode Software provided in or with the applicable OrangeKode product including but not limited to any future programming fixes, updates, upgrades and modifications.\n\n
+
+        This Software may be accompanied by other OrangeKode or third party created Software that is licensed under one of more of the Free Open Source Software licenses and listed under www.opensource.org/licenses. Such Free Open Source Software is provided to you solely under the terms of the respective license agreement or copyright notice accompanying it or in the FOSS licenses file accompanying the Software.  The terms of the EULA do NOT apply to such Free Open Source Software.\n\n
+
+        2.	 License:  Subject to the terms of this EULA, OrangeKode herby grants you a limited, personal, non-commercial, non-exclusive license to use the Software solely as installed on your applicable device.  You may make one copy of the Software in machine-readable form for backup purposes only; copy must include all copyright of other proprietary notices contained on the original.  This license shall not be sublicensed, and not transferable except to a person or entity to which you transfer ownership of your device containing the Software, provided you permanently transfer all rights under this EULA and to not retain any full of partial copies of the Software, and the recipient agrees to the terms of this EULA.\n\n
+
+        3.	Reverse Restriction:  You shall not reverse engineer, decompile, decrypt, or disassemble the Software, or permit, or induce the foregoing except to the extent directly applicable law prohibits enforcement of the foregoing.\n\n
+
+        4.	Confidentiality:  You shall have a duty to protect and not do disclose or cause to be disclosed in whole or in part of confidential information of the Software including but not limited to trade secrets, copyrighted material in any form to any third party.\n\n
+
+        5.	Intellectual Property Rights (IP Rights):  You acknowledge and agree that all IP Rights, title, and interest to or arising from the Software are and shall remain the exclusive property of OrangeKode or its licensor.  Nothing in this EULA intends to transfer any such IP Rights to you.  Any unauthorized use of the IP Rights is a violation of this EULA as well as a violation of intellectual property laws, including but not limited to copyright laws and trademark laws.\n\n
+
+        By sending any information, material, ideas, concepts or techniques except for personal information to OrangeKode through Software (feedbacks), you acknowledge to agree that:\n
+        I.	Your feedbacks shall not contain confidential or proprietary information.\n
+
+        II.	OrangeKode is under no obligation of any kind of confidentiality, express or implied, regarding the feedbacks.\n
+
+        III.	OrangeKode shall be entitled to use or disclose, at OrangeKode’s sole discretion, the feedbacks for any purpose, in any way, worldwide.\n
+
+        IV.	Your feedbacks shall become the property of OrangeKode without any obligation of OrangeKode to you.\n
+
+        V.	You are not entitled to any compensation or reimbursement of any kind or form.\n\n
+
+        6.	 Term and Termination:  This EULA will be effective the date you accept the Software agreement.  You may terminate this License at any time by ceasing all use of the Software and removing the Software from your devise.  Your right will terminate without prior notice from OrangeKode if we think you fail to comply with any provisions of this EULA.\n\n
+
+        7.	Warranty Disclaimer and Limitation of Liability:  YOU ACKNOWLEDGE THAT THE SOFTWARE IS PROVIDED “AS IS”. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THIS SOFTWARE IS WITH YOU, INCLUDING BUT NOT LIMITED TO RELATED COST OF ALL NECESSARY SERVICES AND REPAIR. TO THE EXTENT PERMITTED BY LAW, ORANGEKODE MAKES NO WARRANTIES, EXPRESS OR IMPLIED, WITH RESPECT TO THIS SOFTWARE OR ANY OTHER INFORMATION OR DOCUMENTATION PROVIDED UNDER THE EULA OR FOR THIS SOFTWARE, INCLUDING BUT NOT LIMITED TO ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OF AGAINST INFRINGMENT OR ANY WARRANTY ARISING OUT OF USAGE OR OUT OF COURSE OF PERFORMANCE.  ORANGEKODE ALSO MAKES NO WARRANTY AS TO THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THIS SOFTWARE OR AS TO THE ACCURACY OR RELIABILITY OF ANY INFORMATION OBTAINED TRHOUGH THIS SOFTWARE SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR THE LIMITATION EXCLUSING OF LIABILITY, SOME OF THE ABOVE DISCLAIMERS AND LIMITATIONS OF LIABILITY MAY NOT APPLY TO YOU.\n\n
+
+        THE ENTIRE RISK ARISING OUT OF THE USE AND/OR PERFORMANCE OF THIS SOFTWARE REMAINS WITH YOU AND IN NO EVENT SHALL ORANGEKODE, ITS LICENSORS OR ANY OF THEIR RESPECTIVE OFFICERS DIRECTORY, EMPLOYEES, AGENTS OR AFFILIATES BE LIABLE FOR ANY CONSEQUENTIAL, INCIDENTAL, DIRECT, INDIRECT, SPECIAL, PUNITIVE, OR OTHER DAMAGES WHATSOEVER INCLUDING. WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, INTERRUPTION, LOSS OF INFORMATION, OR OTHER PECUNIARY LOSS ARRISING OUT OF OR RELATING TO THIS EULA OR THE USE OF OR INABILITY TO USE THE SOFWARE OR ANY PART THEREOF, EVEN IF ORANGEKODE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR THE LIMITATIONS OR EXCLUSIONS OF LIABILITY FOR CERTAIN DAMAGES.  ACCORDINGLY, SOME OF THE ABOVE DISCLAIMERS AND LIMITATIONS MAY NOT APPLY TO YOU.\n\n
+
+        8.	Indemnity:  YOU agree to defend, indemnify and hold harmless OrangeKode and its affiliates, services providers, syndicators, distributors, licensors, officers, directors, and employees, from and against any and all losses, damages, liabilities, and expenses arising out of any claim or demand (including reasonable attorney fees and court costs) due to or in connection with YOUR violation of the EULA or any applicable lay regulation, or third-party right.
+    </string>
+</resources>

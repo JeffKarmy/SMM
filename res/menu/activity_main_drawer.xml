@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/angle_bend"
+            android:title="@string/label_angle_bend" />
+        <item
+            android:id="@+id/bend_deduction_activity"
+            android:title="@string/label_bend_deduction" />
+        <item
+            android:id="@+id/minimum_cold_bend"
+            android:title="@string/label_minimum_bend_radii_aluminum" />
+        <!--        <item
+                    android:id="@+id/activity_definitions"
+                    android:title="@string/definitions"/>-->
+        <item
+            android:id="@+id/activity_settings"
+            android:title="@string/settings" />
+    </group>
+</menu>
