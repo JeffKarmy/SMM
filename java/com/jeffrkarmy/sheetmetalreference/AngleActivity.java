@@ -3,7 +3,13 @@ package com.jeffrkarmy.sheetmetalreference;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -19,7 +25,7 @@ import com.jeffrkarmy.sheetmetalreference.Class.Utility;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
-public class AngleActivity extends AppCompatActivity {
+public class AngleActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private Utility utility;
     private Calculator cal;
@@ -38,6 +44,17 @@ public class AngleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_angle_bend);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
         //Suppress the keyboard on page load.
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
@@ -53,6 +70,43 @@ public class AngleActivity extends AppCompatActivity {
         textViewFlatPattern = (TextView) findViewById(R.id.editTextAngleOutPut);
 
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (id == R.id.bend_deduction_activity) {
+            Intent intent = new Intent(this, BendDeductionActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.angle_bend) {
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            }
+        } else if (id == R.id.minimum_cold_bend) {
+            Intent intent = new Intent(this, MaterialMinimumBendRadius.class);
+            startActivity(intent);
+        } else if (id == R.id.activity_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.main_activity) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     /**

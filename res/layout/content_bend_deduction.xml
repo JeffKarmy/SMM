@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_bend_deduction_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/activity_bend_deduction_header"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <RelativeLayout
+            android:id="@+id/containerBendDeduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewHeader"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textViewMT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="@string/metal_thickness"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextMT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewMT"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewMT"
+                android:layout_toEndOf="@+id/textViewRadius"
+                android:layout_toRightOf="@+id/textViewRadius"
+                android:background="@drawable/edittext_border"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/textViewRadius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textViewMT"
+                android:layout_alignRight="@+id/textViewMT"
+                android:layout_below="@+id/textViewMT"
+                android:text="@string/inside_radius"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextRadius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewRadius"
+                android:layout_alignLeft="@+id/editTextMT"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/editTextMT"
+                android:layout_alignTop="@+id/textViewRadius"
+                android:background="@drawable/edittext_border"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/textViewAngle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewRadius"
+                android:layout_toLeftOf="@+id/editTextAngle"
+                android:layout_toStartOf="@+id/editTextAngle"
+                android:text="@string/angle_180_degrees"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextAngle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewAngle"
+                android:layout_alignTop="@+id/textViewAngle"
+                android:layout_toEndOf="@+id/textViewRadius"
+                android:layout_toRightOf="@+id/textViewRadius"
+                android:background="@drawable/edittext_border"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/containerBendDeduction"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/button_style"
+            android:onClick="calculate"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/calculate"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewBD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/button"
+            android:layout_marginTop="26dp"
+            android:text="@string/bend_deduction"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewHalfBD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textViewBD"
+            android:layout_alignRight="@+id/textViewBD"
+            android:layout_below="@+id/textViewBD"
+            android:text="@string/half_deduction"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewBendDeductionFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewHalfBD"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/activity_bend_deduction_footer" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textViewBendDeductionFooter"
+            android:paddingTop="10dp"
+            android:text="@string/reference_only"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textViewWarningBendDeductionBend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewBendDeductionFooter"
+            android:onClick="onClickWaringBendDeductionBend"
+            android:paddingTop="10dp"
+            android:text="@string/warning_pinch_point"
+            android:textColor="@color/primaryTextColor" />
+    </RelativeLayout>
+</ScrollView>

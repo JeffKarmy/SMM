@@ -1,87 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/viewMinimumBendRadius"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-    <TextView
-        android:id="@+id/textViewPageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/activity_minimum_bend_radii"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewReference"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewPageTitle"
-        android:layout_centerInParent="true"
-        android:padding="5dp"
-        android:text="@string/mil_hdbk_694a"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewSpinnerAlloy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewReference"
-        android:paddingBottom="5dp"
-        android:text="@string/material_alloy"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/black"
-        android:textStyle="bold" />
-
-    <Spinner
-        android:id="@+id/spinnerAluminumAlloy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewReference"
-        android:layout_toEndOf="@+id/textViewSpinnerAlloy"
-        android:layout_toRightOf="@+id/textViewSpinnerAlloy"
-        android:paddingBottom="5dp" />
-
-    <RelativeLayout
-        android:id="@+id/alloyBanner"
+    <include
+        layout="@layout/app_bar_material_minimum_bend_radius"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spinnerAluminumAlloy"
-        android:background="@color/BlueBackGround">
+        android:layout_height="match_parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:text="@string/material_alloy"
-            android:textColor="@color/TextYellow"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="@string/material_thk"
-            android:textColor="@color/TextYellow"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:text="@string/radius"
-            android:textColor="@color/TextYellow"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <ListView
-        android:id="@+id/listViewAlloy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/alloyBanner"></ListView>
-</RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+</android.support.v4.widget.DrawerLayout>

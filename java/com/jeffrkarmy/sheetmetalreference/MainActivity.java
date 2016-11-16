@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (id == R.id.bend_deduction_activity) {
             Intent intent = new Intent(this, BendDeductionActivity.class);
             startActivity(intent);
@@ -194,12 +194,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.activity_settings) {
             Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
-        } else if (id == R.id.activity_definitions) {
-            Intent intent = new Intent(this, DefinitionsActivity.class);
-            startActivity(intent);
+        } else if (id == R.id.main_activity) {
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            }
         }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

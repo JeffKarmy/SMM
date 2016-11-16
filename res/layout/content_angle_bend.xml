@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_angle_bend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.jeffrkarmy.sheetmetalreference.AngleActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="@string/activity_angle_bend_header" />
+
+        <RelativeLayout
+            android:id="@+id/containerAngleBend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description">
+
+            <TextView
+                android:id="@+id/textViewMT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/metal_thickness"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextMT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewMT"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/textViewMT"
+                android:layout_toRightOf="@+id/textViewMT"
+                android:background="@drawable/edittext_border"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/textViewRadius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textViewMT"
+                android:layout_alignRight="@+id/textViewMT"
+                android:layout_below="@+id/textViewMT"
+                android:text="@string/inside_radius"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextRadius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewRadius"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewMT"
+                android:layout_toEndOf="@+id/textViewRadius"
+                android:layout_toRightOf="@+id/textViewRadius"
+                android:background="@drawable/edittext_border"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/textViewAngle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textViewMT"
+                android:layout_alignRight="@+id/textViewMT"
+                android:layout_below="@+id/textViewRadius"
+                android:text="@string/angle_180_degrees"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextAngle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewAngle"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewRadius"
+                android:layout_toEndOf="@+id/textViewAngle"
+                android:layout_toRightOf="@+id/textViewAngle"
+                android:background="@drawable/edittext_border"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/textViewLegA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textViewMT"
+                android:layout_alignRight="@+id/textViewMT"
+                android:layout_below="@+id/textViewAngle"
+                android:text="@string/leg_a"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextLegA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewLegA"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewAngle"
+                android:layout_toEndOf="@+id/textViewLegA"
+                android:layout_toRightOf="@+id/textViewLegA"
+                android:background="@drawable/edittext_border"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/textViewLegB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textViewMT"
+                android:layout_alignRight="@+id/textViewMT"
+                android:layout_below="@+id/textViewLegA"
+                android:text="@string/leg_b"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextLegB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewLegB"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewLegA"
+                android:layout_toEndOf="@+id/textViewLegB"
+                android:layout_toRightOf="@+id/textViewLegB"
+                android:background="@drawable/edittext_border"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/buttonCalculate"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewLegB"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/button_style"
+                android:onClick="onClickCalculate"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/calculate"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/containerAngle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/containerAngleBend"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageViewAngle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/content_description_image_diagram"
+                android:src="@drawable/rightangle" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/containerFlatPattern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/containerAngleBend"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/editTextAngleOutPut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/layout_flat_pattern"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageViewFlatPattern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextAngleOutPut"
+                android:contentDescription="@string/content_description_image_diagram"
+                android:src="@drawable/flatpattern1" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:paddingTop="10dp"
+            android:text="@string/reference_only"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textViewWarningAngleBend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="onClickWaringAngleBend"
+            android:text="@string/warning_pinch_point"
+            android:textColor="@color/primaryTextColor" />
+    </RelativeLayout>
+</ScrollView>
